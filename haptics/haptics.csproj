@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <AssemblyName>haptics</AssemblyName>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <GameDir Condition="'$(GameDir)' == ''"
+      >$(HOME)/.local/share/Steam/steamapps/common/Game is Full of Bugs/GiFoB_pc</GameDir>
+    <GameManaged>$(GameDir)/Game is Full of Bugs_Data/Managed</GameManaged>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="$(GameManaged)/UnityEngine.dll" Private="false" />
+    <Reference Include="$(GameManaged)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(GameManaged)/Assembly-CSharp.dll" Private="false" />
+  </ItemGroup>
+</Project>

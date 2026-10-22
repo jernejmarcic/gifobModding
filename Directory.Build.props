@@ -1,0 +1,6 @@
+<Project>
+  <!-- build output goes to /tmp, outside the repo -->
+  <PropertyGroup>
+    <ArtifactsPath>/tmp/gifob-mod-build</ArtifactsPath>
+  </PropertyGroup>
+</Project>
