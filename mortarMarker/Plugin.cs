@@ -11,7 +11,7 @@ public class Plugin : BaseUnityPlugin {
 
 [HarmonyPatch(typeof(BulletBase), nameof(BulletBase.ShootBullet))]
 class MortarPatch {
-    static void Postfix(BulletBase __instance, BulletShotType ___bulletShotType, int shooterUnitFactionID, Rigidbody2D ___body2D, DamageStats ___myDamageStatsHolder) {
+    static void Postfix(BulletBase __instance, BulletShotType ___bulletShotType, int shooterUnitFactionID, Rigidbody2D ___body2D, DamageStats ___myDamageStatsHolder)  { // And this is why you need an ultrawide for Java or C#
         if (___bulletShotType == BulletShotType.Mortar && shooterUnitFactionID == 0) {
             Vector3 start = __instance.transform.position;
             Vector3 velocity = ___body2D.linearVelocity;

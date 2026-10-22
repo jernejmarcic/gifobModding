@@ -2,12 +2,21 @@
 
 Mods for Game is Full of Bugs, built on BepInEx 5.
 
-| mod | what |
-|---|---|
-| wootingRGB | lights your keyboard with the game: an animation per biome, a red flash when you get hit, a white sweep when you reload |
-| haptics | haptic feedback, work in progress |
+## WootingRGB
 
-wootingRGB only sends game events. The program that drives the keyboard is coming soon.
+RGB effects for your Wooting keyboard.
+
+| | |
+|---|---|
+| Flashes red when hit | <img src="docs/hit.gif" width="400"> |
+| White sweep when reloading | <img src="docs/reload.gif" width="400"> |
+
+## Mortar AOE location
+
+Displays the location of where the mortar AOE will hit.
+
+<img src="docs/mortar.png" width="600">
+
 
 ## Install
 
@@ -23,3 +32,6 @@ Needs the .NET SDK and the game installed.
 
 If the game is not in the default Steam library, add `-p:GameDir="/path/to/GiFoB_pc"`.
 The output folder is set in `Directory.Build.props`.
+
+## Testing
+All the mods have been built and tested on the demo, under Proton
